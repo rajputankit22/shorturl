@@ -14,7 +14,7 @@ router.get('/:shorturl', function(req, res, next) {
           if(err) return res.json({error : true , reason : err});
           var cmpurl = 'http://'+q.old;
           res.redirect(cmpurl);
-        })
+        });
 
 });
 /* POST to save URL. */
