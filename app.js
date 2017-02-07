@@ -6,10 +6,12 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 //var shortid = require('shortid');
 var mongoose = require('mongoose');
-mongoose.connect('mongodb://localhost/short');
+mongoose.connect('mongodb://short:SumanPramod22mlab@ds145639.mlab.com:45639/short');
+var config = require('./config')[process.env.NODE_ENV || 'development'];
+
 
 var index = require('./routes/index');
-var users = require('./routes/users');
+// var users = require('./routes/users');
 
 var app = express();
 
