@@ -8,8 +8,8 @@ router.get('/', function(req, res, next) {
   res.render('url', { title: 'Short URL' });
 });
 /* GET new URL. */
-router.get('/:shorturl', function(req, res, next) {
-      var some = req.params.shorturl;
+router.get('/:shortur', function(req, res, next) {
+      var some = req.params.shortur;
       Shorturl.findOne({new:some}).exec(function(err, q) {
           if(err) return res.json({error : true , reason : err});
           var cmpurl = 'http://'+q.old;
